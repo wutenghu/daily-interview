@@ -88,8 +88,7 @@ Adaboost是前向分步加法算法的特例，分类问题的时候认为损失
    $$G_{m}^*=argmin_{G}\sum_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G(x_i))$$
    之后求 $\alpha_m^*$ ,将上述式子化简，得到
 
-$$\sum_{i=1}^{N}\hat{w}_{mi}exp[-y_i \alpha G(x_i)]
-= \sum_{y_i =G_m(x_i)}\hat{w}_{mi}e^{-\alpha}+\sum_{y_i \neq G_m(x_i)}{\hat{w}_{mi}e^{\alpha}} = (e^{\alpha} - e^{- \alpha})\sum_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G(x_i)) + e^{- \alpha}\sum_{i=1}^{N}\hat{w}_{mi}$$
+$$\sum_{i=1}^{N}\hat{w}_{mi}exp[-y_i \alpha G(x_i)]=\sum_{y_i =G_m(x_i)}\hat{w}_{mi}e^{-\alpha}+\sum_{y_i \neq G_m(x_i)}{\hat{w}_{mi}e^{\alpha}} = (e^{\alpha} - e^{- \alpha})\sum_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G(x_i)) + e^{- \alpha}\sum_{i=1}^{N}\hat{w}_{mi}$$
 
 将已经求得的 $G_m^*(x)$ 带入上式面，对 $\alpha$ 求导并等于0，得到最优的 $\alpha$.
 $$a_m^*=\frac{1}{2} log{\frac{1-e_m}{e_m}}$$
