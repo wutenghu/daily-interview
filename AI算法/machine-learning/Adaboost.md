@@ -41,19 +41,14 @@ G_{t}(x) : \quad \chi \rightarrow\{-1,+1\}
 $$
 - 计算 $G_t(x)$ 在训练数据集上的分类误差率（其实就是被 $G_t(x) $误分类样本的权值之和）:  
 
-$$
-e_{t}=P\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)=\sum\limits_{i=1}^{m} w_{t i} I\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)
-$$
+$$e_{t}=P\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)=\sum\limits_{i=1}^{m} w_{t i} I\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)$$
+
   - 计算弱分类器 Gt(x) 在最终分类器中的系数(即所占权重)
 $$\alpha_{t}=\frac{1}{2} \ln \frac{1-e_{t}}{e_{t}}$$
   -  更新训练数据集的权值分布，用于下一轮（t+1）迭代
-$$
-D(t+1)=\left(w_{t+1,1} ,w_{t+1,2} ,\cdots w_{t+1, i} \cdots, w_{t+1, m}\right)
-$$
+$$D(t+1)=(w_{t+1,1} ,w_{t+1,2} ,\cdots w_{t+1, i} \cdots, w_{t+1, m})$$
 
-$$
-w_{t+1,i}=\frac{w_{t,i}}{Z_{t}} \times \left\{\begin{array}{ll}{e^{-\alpha_{t}}} & {\text （{ if } G_{t}\left(x_{i}\right)=y_{i}}） \\ {e^{\alpha_{t}}} & {\text （{ if } G_{t}\left(x_{i}\right) \neq y_{i}}）\end{array}\right.= \frac{w_{t,i}}{Z_{t}} \exp \left(-\alpha_{t} y_{i} G_{t}\left(x_{i}\right)\right)
-$$
+$$w_{t+1,i}=\frac{w_{t,i}}{Z_{t}} \times \left\{\begin{array}{ll}{e^{-\alpha_{t}}} & {\text （{ if } G_{t}\left(x_{i}\right)=y_{i}}） \\ {e^{\alpha_{t}}} & {\text （{ if } G_{t}\left(x_{i}\right) \neq y_{i}}）\end{array}\right.= \frac{w_{t,i}}{Z_{t}} \exp \left(-\alpha_{t} y_{i} G_{t}\left(x_{i}\right)\right)$$
 
    
 
