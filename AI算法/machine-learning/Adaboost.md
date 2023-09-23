@@ -50,7 +50,7 @@ $$
 - 计算 $G_t(x)$ 在训练数据集上的分类误差率（其实就是被 $G_t(x) $误分类样本的权值之和）:  
 
 $$
-e_{t}=P\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)=\sum_{i=1}^{m} w_{t i} I\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)
+e_{t}=P\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)=\sum\limits_{i=1}^{m} w_{t i} I\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)
 $$
   - 计算弱分类器 Gt(x) 在最终分类器中的系数(即所占权重)
 $$\alpha_{t}=\frac{1}{2} \ln \frac{1-e_{t}}{e_{t}}$$
@@ -66,11 +66,11 @@ $$
    
 
 - 其中 $Z_t$ 是规范化因子，使得 $D(t+1)$ 成为一个概率分布（和为1）：
-$$Z_{t}=\sum_{j=1}^{m} w_{t,i} \exp \left(-\alpha_{t} y_{i} G_{t}\left(x_{i}\right)\right)$$
+$$Z_{t}=\sum\limits_{j=1}^{m} w_{t,i} \exp \left(-\alpha_{t} y_{i} G_{t}\left(x_{i}\right)\right)$$
 
 
 * 集成 $T$ 个弱分类器为1个最终的强分类器：
-$$G(x)=\operatorname{sign}\left(\sum_{t=1}^{T} \alpha_{t} G_{t}(x)\right)$$
+$$G(x)=\operatorname{sign}\left(\sum\limits_{t=1}^{T} \alpha_{t} G_{t}(x)\right)$$
 
 
 ## 3. 算法面试题
@@ -79,19 +79,19 @@ $$G(x)=\operatorname{sign}\left(\sum_{t=1}^{T} \alpha_{t} G_{t}(x)\right)$$
 Adaboost是前向分步加法算法的特例，分类问题的时候认为损失函数指数函数。
 
 1. 当基函数是分类器时，Adaboost的最终分类器是：
-   $$f(x)=\sum_{m-1}^{M}{\alpha_mG_m(x)}=f_{m-1}(x)+{\alpha_mG_m(x)}$$
+   $$f(x)=\sum\limits_{m-1}^{M}{\alpha_mG_m(x)}=f_{m-1}(x)+{\alpha_mG_m(x)}$$
    
 2. 目标是使前向分步算法得到的 $\alpha$ 和 $G_m(x)$ 使 $f_m(x)$ 在训练数据集T上的指数损失函数最小，即
-   $$(\alpha, G_m(x))=arg min_{\alpha, G}\sum_{i=1}^{N}exp[-y_i(f_{m-1}(x_i)+\alpha G(x_i))]$$
+   $$(\alpha, G_m(x))=arg min_{\alpha, G}\sum\limits_{i=1}^{N}exp[-y_i(f_{m-1}(x_i)+\alpha G(x_i))]$$
 其中，$`\hat{w}_{mi}=exp[-y_i f_{m-1}(x_i)]`$ . 为了求上式的最小化，首先计算 $`G_m^*(x)`$ ,对于任意的 $`\alpha >0`$ ,可以转化为下式：
-   $$`G_{m}^*=argmin_{G}\sum_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G(x_i))`$$
+   $$`G_{m}^*=argmin_{G}\sum\limits_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G(x_i))`$$
    之后求 $`\alpha_m^*`$ ,将上述式子化简，得到
-$`\sum_{i=1}^{N}\hat{w}_{mi}exp[-y_i \alpha G(x_i)]=\sum_{y_i =G_m(x_i)}\hat{w}_{mi}e^{-\alpha}+\sum_{y_i \neq G_m(x_i)}{\hat{w}_{mi}e^{\alpha}} = (e^{\alpha} - e^{- \alpha})\sum_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G(x_i)) + e^{- \alpha}\sum_{i=1}^{N}\hat{w}_{mi}`$
+$`\sum\limits_{i=1}^{N}\hat{w}_{mi}exp[-y_i \alpha G(x_i)]=\sum\limits_{y_i =G_m(x_i)}\hat{w}_{mi}e^{-\alpha}+\sum\limits_{y_i \neq G_m(x_i)}{\hat{w}_{mi}e^{\alpha}} = (e^{\alpha} - e^{- \alpha})\sum\limits_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G(x_i)) + e^{- \alpha}\sum\limits_{i=1}^{N}\hat{w}_{mi}`$
 
 将已经求得的 $`G_m^*(x)`$ 带入上式面，对 $`\alpha`$ 求导并等于0，得到最优的 $`\alpha`$.
 $`a_m^*=\frac{1}{2} log{\frac{1-e_m}{e_m}}`$
 其中 $`e_m`$ 是分类误差率:
-$`e_m=\frac{\sum_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G_m(x_i))}{\sum_{i=1}^{N}\hat{w}_{mi}}=\sum_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G_m(x_i))`$
+$`e_m=\frac{\sum\limits_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G_m(x_i))}{\sum\limits_{i=1}^{N}\hat{w}_{mi}}=\sum\limits_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G_m(x_i))`$
 
 
 
@@ -115,7 +115,7 @@ Adaboost也能够应用到回归问题，相应的算法如下:
      $$e_{mi}=\frac{(y_i-G_m(x_i))^2}{E_m^2}$$
      
    + 计算回归误差率: 
-     $$e_m=\sum_{i=1}^{N}w_{mi}e_{mi}$$
+     $$e_m=\sum\limits_{i=1}^{N}w_{mi}e_{mi}$$
      
    + 计算学习器系数: 
      $$\alpha_m=\frac{e_m}{1-e_m}$$
@@ -123,10 +123,10 @@ Adaboost也能够应用到回归问题，相应的算法如下:
    + 更新样本权重：
      $$w_{m+1,i}=\frac{w_{mi}}{Z_m}{\alpha_{m}^{1-e^{m,i}}}$$
      其中$Z_m$是规范化因子，
-     $$Z_m=\sum_{i=1}^{m}w_{mi}{\alpha_{m}^{1-e^{m,i}}}$$
+     $$Z_m=\sum\limits_{i=1}^{m}w_{mi}{\alpha_{m}^{1-e^{m,i}}}$$
    
 3. 得到强学习器：
-   $$f(x)=\sum_{m=1}{M}G_{m}^*(x)$$
+   $$f(x)=\sum\limits_{m=1}{M}G_{m}^*(x)$$
 
 **注:** **不管是分类问题还是回归问题，根据误差改变权重就是Adaboost的本质，可以基于这个构建相应的强学习器。**
 
