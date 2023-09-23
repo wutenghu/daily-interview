@@ -82,7 +82,7 @@ Adaboost是前向分步加法算法的特例，分类问题的时候认为损失
    $$f(x)=\sum\limits_{m-1}^{M}{\alpha_mG_m(x)}=f_{m-1}(x)+{\alpha_mG_m(x)}$$
    
 2. 目标是使前向分步算法得到的 $\alpha$ 和 $G_m(x)$ 使 $f_m(x)$ 在训练数据集T上的指数损失函数最小，即
-   $$(\alpha, G_m(x))=arg min_{\alpha, G}\sum\limits_{i=1}^{N}exp[-y_i(f_{m-1}(x_i)+\alpha G(x_i))]$$
+   $`(\alpha, G_m(x))=arg min_{\alpha, G}\sum\limits_{i=1}^{N}exp[-y_i(f_{m-1}(x_i)+\alpha G(x_i))]`$
 其中，$`\hat{w}_{mi}=exp[-y_i f_{m-1}(x_i)]`$ . 为了求上式的最小化，首先计算 $`G_m^*(x)`$ ,对于任意的 $`\alpha >0`$ ,可以转化为下式：
    $$`G_{m}^*=argmin_{G}\sum\limits_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G(x_i))`$$
    之后求 $`\alpha_m^*`$ ,将上述式子化简，得到
