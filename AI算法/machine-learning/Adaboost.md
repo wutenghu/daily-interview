@@ -32,7 +32,7 @@
 $$T=\left\lbrace{\left(x_{1},y_{1}\right),\ldots,\left(x_{m},y_{m}\right)\right\rbrace$$
 
 
-$y_i$ 属于标记集合$\{-1,+1\}$。
+$y_i$ 属于标记集合 $\{-1,+1\}$。
 
 训练集的在第$k$个弱学习器的输出权重为
 $$
@@ -55,9 +55,7 @@ $$
 e_{t}=P\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)=\sum_{i=1}^{m} w_{t i} I\left(G_{t}\left(x_{i}\right) \neq y_{i}\right)
 $$
   - 计算弱分类器 Gt(x) 在最终分类器中的系数(即所占权重)
-$$
-\alpha_{t}=\frac{1}{2} \ln \frac{1-e_{t}}{e_{t}}
-$$
+$$\alpha_{t}=\frac{1}{2} \ln \frac{1-e_{t}}{e_{t}}$$
   -  更新训练数据集的权值分布，用于下一轮（t+1）迭代
 $$
 D(t+1)=\left(w_{t+1,1} ,w_{t+1,2} ,\cdots w_{t+1, i} \cdots, w_{t+1, m}\right)
