@@ -24,7 +24,7 @@
 
 ### 2.2 Adaboost 算法流程
 
-给定一个样本数量为 $m$ 的数据集 $T=\left\{\left(x_{1},y_{1}\right),\ldots,\left(x_{m},y_{m}\right)\right}$
+给定一个样本数量为 $m$ 的数据集 $`T=\left\{\left(x_{1},y_{1}\right),\ldots,\left(x_{m},y_{m}\right)\right}`$
 
 
 $y_i$ 属于标记集合 $\{-1,+1\}$。
@@ -67,7 +67,7 @@ $$Z_{t}=\sum_{j=1}^{m} w_{t,i} \exp \left(-\alpha_{t} y_{i} G_{t}\left(x_{i}\rig
 
 
 * 集成 $T$ 个弱分类器为1个最终的强分类器：
-$$`G(x)=\operatorname{sign}\left(\sum_{t=1}^{T} \alpha_{t} G_{t}(x)\right)`$$
+$$G(x)=\operatorname{sign}\left(\sum_{t=1}^{T} \alpha_{t} G_{t}(x)\right)$$
 
 
 ## 3. 算法面试题
