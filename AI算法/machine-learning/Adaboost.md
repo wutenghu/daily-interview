@@ -1,7 +1,7 @@
 ![Adboost框架图](img/Adaboost/Adboost框架图.png)
 
 
-$$\hat{w}_{mi}=exp[-y_i f_{m-1}(x_i)]$$
+$`\hat{w}_{mi}=exp[-y_i f_{m-1}(x_i)]`$
 
 
 # Adaboost 算法介绍
