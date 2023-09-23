@@ -1,5 +1,8 @@
 ![Adboost框架图](img/Adaboost/Adboost框架图.png)
 
+
+$`\sum{i}{N}`$
+
 # Adaboost 算法介绍
 
 ## 1. 集成学习
@@ -89,6 +92,7 @@ $`\sum_{i=1}^{N}\hat{w}_{mi}exp[-y_i \alpha G(x_i)]=\sum_{y_i =G_m(x_i)}\hat{w}_
 $`a_m^*=\frac{1}{2} log{\frac{1-e_m}{e_m}}`$
 其中 $`e_m`$ 是分类误差率:
 $`e_m=\frac{\sum_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G_m(x_i))}{\sum_{i=1}^{N}\hat{w}_{mi}}=\sum_{i=1}^{N}\hat{w}_{mi}I(y_i \neq G_m(x_i))`$
+
 
 
 ### 3.2 Adaboost能否做回归问题？
