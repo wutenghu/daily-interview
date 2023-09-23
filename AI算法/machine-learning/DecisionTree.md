@@ -74,17 +74,14 @@
 
 $$\rho=\frac{\sum_{x \in \tilde{D}} w_{x}}{\sum_{x \in {D}} w_{x}}$$
 
-<p align="center">
-// Your content
 
 $`\tilde{p}_{k}=\frac{\sum_{x \in \tilde{D}_{k}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq \mathrm{k} \leq|y|)`$
 
 $`\tilde{r}_{v}=\frac{\sum_{x \in \tilde D^{v}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq v \leq V)`$
-</p>
 
-​	假设特征$A$有$v$个取值$\{a_1,a_2 \dots a_v\}$
+假设特征$A$有$v$个取值$\{a_1,a_2 \dots a_v\}$
 
-​	$\tilde D$：该特征上没有缺失值的样本
+$\tilde D$：该特征上没有缺失值的样本
 
 ​	$\tilde D_k$：$\tilde D$中属于第$k$类的样本子集
 
