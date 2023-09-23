@@ -81,7 +81,7 @@ $`\tilde{r}_{v}=\frac{\sum_{x \in \tilde D^{v}} w_{x}}{\sum_{x \in \tilde{D}} w_
 
 假设特征$A$有$v$个取值$\{a_1,a_2 \dots a_v\}$
 
-$\tilde D$：该特征上没有缺失值的样本
+​	$\tilde D$：该特征上没有缺失值的样本
 
 ​	$\tilde D_k$：$\tilde D$中属于第$k$类的样本子集
 
