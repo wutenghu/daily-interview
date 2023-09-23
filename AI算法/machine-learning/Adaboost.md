@@ -27,20 +27,15 @@
 
 给定一个样本数量为 $m$ 的数据集 $`T=\{(x_{1},y_{1}),\ldots,(x_{m},y_{m})\}`$
 
-
 $y_i$ 属于标记集合 $\{-1,+1\}$。
 
-训练集的在第$k$个弱学习器的输出权重为
-$$
-D(k)=\left(w_{k 1}, w_{k 2}, \ldots w_{k m}\right) ; \quad w_{1 i}=\frac{1}{m} ; i=1,2 \ldots m
-$$
+训练集的在第 $k$ 个弱学习器的输出权重为
+$$D(k)=\left(w_{k 1}, w_{k 2}, \ldots w_{k m}\right) ; \quad w_{1 i}=\frac{1}{m} ; i=1,2 \ldots m$$
 - 初始化训练样本的权值分布，每个训练样本的权值相同：
 
-$$
-D(1)=\left(w_{1 1}, w_{1 2}, \ldots w_{1 m}\right) ; \quad w_{1 i}=\frac{1}{m} ; i=1,2 \ldots m
-$$
+$$D(1)=\left(w_{1 1}, w_{1 2}, \ldots w_{1 m}\right) ; \quad w_{1 i}=\frac{1}{m} ; i=1,2 \ldots m$$
 - 进行多轮迭代，产生$T$个弱分类器。
-  - 使用权值分布 $D(t) $的训练集进行训练，得到一个弱分类器
+- 使用权值分布 $D(t) $的训练集进行训练，得到一个弱分类器
 
 $$
 G_{t}(x) : \quad \chi \rightarrow\{-1,+1\}
