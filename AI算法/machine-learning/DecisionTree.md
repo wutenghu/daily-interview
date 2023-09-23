@@ -74,9 +74,9 @@
 
 $$\rho=\frac{\sum_{x \in \tilde{D}} w_{x}}{\sum_{x \in {D}} w_{x}}$$
 
-$$\tilde{p}_{k}=\frac{\sum_{x \in \tilde{D}_{k}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq \mathrm{k} \leq|y|)$$
+$`\tilde{p}_{k}=\frac{\sum_{x \in \tilde{D}_{k}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq \mathrm{k} \leq|y|)`$
 
-$$\tilde{r}_{v}=\frac{\sum_{x \in \tilde D^{v}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq v \leq V)$$
+$`\tilde{r}_{v}=\frac{\sum_{x \in \tilde D^{v}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq v \leq V)`$
 
 ​	假设特征$A$有$v$个取值$\{a_1,a_2 \dots a_v\}$
 
