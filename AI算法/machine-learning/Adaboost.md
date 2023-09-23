@@ -28,8 +28,9 @@
 
 ### 2.2 Adaboost 算法流程
 
-给定一个样本数量为$m$的数据集
+给定一个样本数量为 $m$ 的数据集
 $$T=\left\lbrace{\left(x_{1}, y_{1}\right),\ldots,\left(x_{m},y_{m}\right)\right\rbrace$$
+
 
 $y_i$ 属于标记集合$\{-1,+1\}$。
 
