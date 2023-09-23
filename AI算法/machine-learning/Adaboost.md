@@ -1,7 +1,7 @@
 ![Adboost框架图](img/Adaboost/Adboost框架图.png)
 
 
-$`\sum{i}{N}`$
+$`\sum_{i}^{N}`$
 
 # Adaboost 算法介绍
 
