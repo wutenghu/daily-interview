@@ -70,16 +70,13 @@
 
   * 划分数据，一部分是有特征值$`a`$的数据，另一部分是没有特征值$`a`$的数据,记为$`\tilde{D}`$，
 
-  *  **对**没有缺失特征值$`a`$的**数据集$`\tilde{D}`$，**来和对应的特征$`A`$的各个特征值一起**计算加权重后的信息增益比**，最后乘上一个系数$`\rho`$ 。
-$`\rho=\frac{\sum_{x \in \tilde{D}} w_{x}}{\sum_{x \in {D}} w_{x}}`$
+  * **对**没有缺失特征值$`a`$的**数据集$`\tilde{D}`$，**来和对应的特征$`A`$的各个特征值一起**计算加权重后的信息增益比**，最后乘上一个系数$`\rho`$ 。
 
-$$
-\tilde{p}_{k}=\frac{\sum_{x \in \tilde{D}_{k}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq \mathrm{k} \leq|y|)
-$$
+$$\rho=\frac{\sum_{x \in \tilde{D}} w_{x}}{\sum_{x \in {D}} w_{x}}$$
 
-$$
-\tilde{r}_{v}=\frac{\sum_{x \in \tilde D^{v}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq v \leq V)
-$$
+$$\tilde{p}_{k}=\frac{\sum_{x \in \tilde{D}_{k}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq \mathrm{k} \leq|y|)$$
+
+$$\tilde{r}_{v}=\frac{\sum_{x \in \tilde D^{v}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq v \leq V)$$
 
 ​	假设特征$A$有$v$个取值$\{a_1,a_2 \dots a_v\}$
 
