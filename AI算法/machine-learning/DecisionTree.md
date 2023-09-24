@@ -49,7 +49,7 @@ $$Gain(D,a)=Ent(D)-\sum\limits_{v=1}^{V}\frac{|D^v|}{|D|}Ent(D^v)$$
 实际上，信息增益准则对可取值数目较多的属性有所偏好，为减少这种偏好可能带来的不利影响，
 著名的$`C4.5`$决策树算法 [Quinlan，1993J 不直接使用信息增益，而是使用"增益率" (gain ratio) 来选择最优划分属性。
 采用与式 (4.2)相同的符号表示，增益率定义为
-$$Gain\\_ratio(D,a)=\frac{Gain(D,a)}{IV(a)}$$
+$$Gain\underline ratio(D,a)=\frac{Gain(D,a)}{IV(a)}$$
 其中
 $$IV(a)=-\sum\limits_{v=1}^{V}\frac{|D^v|}{|D|}log_{2}\frac{|D^v|}{|D|}$$
 
