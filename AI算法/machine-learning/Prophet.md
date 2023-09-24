@@ -82,12 +82,11 @@ $`s(t)=\sum\limits_{n=1}^{N}\left(a_{n} \cos \left(\frac{2 \pi n t}{P}\right)+b_
 ## 6. 节假日效应（holidays and events）
 
 除了周末，同样有很多节假日，而且不同的国家有着不同的假期，不同的节假日可以看成相互独立的模型，并且可以为不同的节假日设置不同的前后窗口值，表示该节假日会影响前后一段时间的时间序列。
-$$
-h(t)=Z(t) \boldsymbol{\kappa}=\sum_{i=1}^{L} \kappa_{i} \cdot 1_{\left\{t \in D_{i}\right\}}
-$$
-其中：$Z(t)=\left(1_{\left\{t \in D_{1}\right\}}, \cdots, 1_{\left\{t \in D_{L}\right\}}\right), \boldsymbol{\kappa}=\left(\kappa_{1}, \cdots, \kappa_{L}\right)^{T}$，$\boldsymbol{\kappa} \sim \operatorname{Normal}\left(0, v^{2}\right)$
+$`h(t)=Z(t) \boldsymbol{\kappa}=\sum_{i=1}^{L} \kappa_{i} \cdot 1_{\left\{t \in D_{i}\right\}}`$
+其中：$`Z(t)=\left(1_{\left\{t \in D_{1}\right\}}, \cdots, 1_{\left\{t \in D_{L}\right\}}\right), \boldsymbol{\kappa}=\left(\kappa_{1}, \cdots, \kappa_{L}\right)^{T}`$，
+$`\boldsymbol{\kappa} \sim \operatorname{Normal}\left(0, v^{2}\right)`$
 
-并且该正态分布是受到$v$ = holidays_prior_scale 这个指标影响的。默认值是 10，当值越大时，表示节假日对模型的影响越大；当值越小时，表示节假日对模型的效果越小
+并且该正态分布是受到$`v`$=holidays_prior_scale 这个指标影响的。默认值是 10，当值越大时，表示节假日对模型的影响越大；当值越小时，表示节假日对模型的效果越小
 
 
 
