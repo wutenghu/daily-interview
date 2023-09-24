@@ -73,7 +73,8 @@
   * **对**没有缺失特征值$`a`$的**数据集$`\tilde{D}`$，**来和对应的特征$`A`$的各个特征值一起**计算加权重后的信息增益比**，最后乘上一个系数$`\rho`$ 。
 
 <div align=center>
-$$\rho=\frac{\sum_{x \in \tilde{D}} w_{x}}{\sum_{x \in {D}} w_{x}}$$
+
+$`\rho=\frac{\sum_{x \in \tilde{D}} w_{x}}{\sum_{x \in {D}} w_{x}}`$
 
 $`\tilde{p}_{k}=\frac{\sum_{x \in \tilde{D}_{k}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq \mathrm{k} \leq|y|)`$
 
