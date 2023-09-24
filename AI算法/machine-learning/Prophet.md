@@ -88,7 +88,7 @@ $`h(t)=Z(t) \boldsymbol{\kappa}=\sum_{i=1}^{L} \kappa_{i} \cdot 1_{\left\{t \in 
 其中：$`Z(t)=\left(1_{\left\{t \in D_{1}\right\}}, \cdots, 1_{\left\{t \in D_{L}\right\}}\right), \boldsymbol{\kappa}=\left(\kappa_{1}, \cdots, \kappa_{L}\right)^{T}`$，
 $`\boldsymbol{\kappa} \sim \operatorname{Normal}\left(0, v^{2}\right)`$
 
-并且该正态分布是受到$`v`$=holidays_prior_scale 这个指标影响的。默认值是 10，当值越大时，表示节假日对模型的影响越大；当值越小时，表示节假日对模型的效果越小
+并且该正态分布是受到$`v=holidays_prior_scale`$这个指标影响的。默认值是 10，当值越大时，表示节假日对模型的影响越大；当值越小时，表示节假日对模型的效果越小
 
 
 
