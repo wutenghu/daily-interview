@@ -56,7 +56,7 @@ $$IV(a)=-\sum\limits_{v=1}^{V}\frac{|D^v|}{|D|}log_{2}\frac{|D^v|}{|D|}$$
 ### 基尼指数
 CART决策树[Breiman et al., 1984]使用"基尼指数" (Gini index)来选择划分属性。
 采用与式(4.1)相同的符号，数据集$`D`$的纯度可用基尼值来度量:
-$$Gini(D)=\sum\limits_{k=1}^{Y}\sum\limits_{k' \neq k}^{Y} p_{k} p'_{k} = \sum\limits_{k=1}^{Y}$$
+$$Gini(D)=\sum\limits_{k=1}^{Y}\sum\limits_{k' \neq k}^{Y} p_{k} p'_{k}$$
 
 ## 4. ID3算法—>C4.5算法—> CART算法 
 
