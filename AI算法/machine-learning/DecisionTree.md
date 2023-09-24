@@ -47,7 +47,7 @@ $$Gain(D,a)=Ent(D)-\sum\limits_{v=1}^{V}\frac{|D^v|}{|D|}Ent(D^v)$$
 
 ### 信息增益率
 实际上，信息增益准则对可取值数目较多的属性有所偏好，为减少这种偏好可能带来的不利影响，
-著名的$`C4.5`$决策树算法 [Quinlan，1993J 不直接使用信息增益，而是使用"增益率" (gain ratio) 来选择最优划分属性。
+著名的$`C4.5`$决策树算法[Quinlan，1993]不直接使用信息增益，而是使用"增益率" (gain ratio) 来选择最优划分属性。
 采用与式 (4.2)相同的符号表示，增益率定义为
 $$GainRatio(D,a)=\frac{Gain(D,a)}{IV(a)}$$
 其中
@@ -62,7 +62,6 @@ $$Gini(D)=\sum\limits_{k=1}^{Y}\sum\limits_{k' \neq k}^{Y} p_{k} p'_{k}$$
 
 采用与式(4.2)相同的符号表示，属性$`a`$的基尼指数定义为
 $$GiniIndex(D,a)=\sum\limits_{v=1}^{V}\frac{|D^v|}{|D|}Gini(D^v)$$
-
 
 ## 4. ID3算法—>C4.5算法—> CART算法 
 
