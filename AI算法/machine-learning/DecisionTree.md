@@ -156,7 +156,7 @@ $$
 * 把区间$`[a_i,a_{i+1})`$的中位点$`\frac{a_i + a_{i+1}}{2}`$作为候选划分点
 
 * 按照处理离散值那样来选择最优的划分点,使用公式：
-  $$Gain(D,a) =\underbrace{max}_{t\in T_a}Gain(D,a,t) = \underbrace{max}_{t\in T_a}\ (Ent(D) - \sum_{\lambda \in \{-,+ \}}\frac{|D_t^{\lambda}|}{|D|}Ent(D_t^{\lambda}))$$
+  $`Gain(D,a) =\underbrace{max}_{t\in T_a}Gain(D,a,t) = \underbrace{max}_{t\in T_a}\ (Ent(D) - \sum_{\lambda \in \{-,+ \}}\frac{|D_t^{\lambda}|}{|D|}Ent(D_t^{\lambda}))`$
   其中$`Gain(D,a,t)`$是样本集$`D`$基于划分点$`t`$二分之后的信息增益。划分点时候选择使用$`Gain(D,a,t)`$最大的划分点。
 
 ## 8. 决策树对离散值的处理
