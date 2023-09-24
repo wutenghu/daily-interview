@@ -6,23 +6,15 @@
 
 常见的时间序列分解方法：
 
-将时间序列分成季节项$S_t$，趋势项$T_t$，剩余项$R_t$，即对所有的$t≥0$
-$$
-y_{t}=S_{t}+T_{t}+R_{t}	
-$$
+将时间序列分成季节项$`S_t`$，趋势项$`T_t`$，剩余项$`R_t`$，即对所有的$`t≥0`$
+$$y_{t}=S_{t}+T_{t}+R_{t}$$
 
-$$
-y_{t}=S_{t} \times T_{t} \times R_{t}
-$$
+$$y_{t}=S_{t} \times T_{t} \times R_{t}$$
 
-$$
-\ln y_{t}=\ln S_{t}+\ln T_{t}+\ln R_{t}
-$$
+$$\ln y_{t}=\ln S_{t}+\ln T_{t}+\ln R_{t}$$
 
 fbprophet 的在此基础上，添加了节日项。
-$$
-y(t)=g(t)+s(t)+h(t)+\epsilon_{t}
-$$
+$$y(t)=g(t)+s(t)+h(t)+\epsilon_{t}$$
 
 ## 2. 趋势项模型
 
