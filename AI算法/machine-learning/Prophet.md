@@ -21,9 +21,7 @@ $$y(t)=g(t)+s(t)+h(t)+\epsilon_{t}$$
 * **基于逻辑回归**
 
    sigmoid 函数为
-  $$
-  \sigma(x)=1 /\left(1+e^{-x}\right)
-  $$
+  $`\sigma(x)=1 /\left(1+e^{-x}\right)`$
   prophet在逻辑回归的基础上添加了随时间变化的参数，那么逻辑回归就可以改写成：
   $$
   f(x)=\frac{C(t)}{\left(1+e^{-k(t)(x-m(t))}\right)}
