@@ -18,7 +18,7 @@ $$y(t)=g(t)+s(t)+h(t)+\epsilon_{t}$$
 
 ## 2. 趋势项模型
 
-* **基于逻辑回归：**sigmoid 函数为$`\sigma(x)=1 /\left(1+e^{-x}\right)`$
+* **基于逻辑回归：** sigmoid 函数为$`\sigma(x)=1 /\left(1+e^{-x}\right)`$
   prophet在逻辑回归的基础上添加了随时间变化的参数，那么逻辑回归就可以改写成：
   $`f(x)=\frac{C(t)}{\left(1+e^{-k(t)(x-m(t))}\right)}`$
   这里的$`C`$称为曲线的最大渐近值，$`k`$表示曲线的增长率，$`m`$表示曲线的中点。 
@@ -75,10 +75,8 @@ $$y(t)=g(t)+s(t)+h(t)+\epsilon_{t}$$
 
 prophet算法使用傅立叶级数来模拟时间序列的周期性
 
-$P$表示时间序列的周期， $P = 365.25$表示以年为周期，$P = 7$表示以周为周期。它的傅立叶级数的形式都是：
-$$
-s(t)=\sum_{n=1}^{N}\left(a_{n} \cos \left(\frac{2 \pi n t}{P}\right)+b_{n} \sin \left(\frac{2 \pi n t}{P}\right)\right)
-$$
+$`P`$表示时间序列的周期， $P = 365.25$表示以年为周期，$P = 7$表示以周为周期。它的傅立叶级数的形式都是：
+$`s(t)=\sum_{n=1}^{N}\left(a_{n} \cos \left(\frac{2 \pi n t}{P}\right)+b_{n} \sin \left(\frac{2 \pi n t}{P}\right)\right)`$
 
 ## 6. 节假日效应（holidays and events）
 
