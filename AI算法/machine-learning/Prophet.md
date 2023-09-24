@@ -75,8 +75,9 @@ $$y(t)=g(t)+s(t)+h(t)+\epsilon_{t}$$
 
 prophet算法使用傅立叶级数来模拟时间序列的周期性
 
-$`P`$表示时间序列的周期， $P = 365.25$表示以年为周期，$P = 7$表示以周为周期。它的傅立叶级数的形式都是：
-$`s(t)=\sum_{n=1}^{N}\left(a_{n} \cos \left(\frac{2 \pi n t}{P}\right)+b_{n} \sin \left(\frac{2 \pi n t}{P}\right)\right)`$
+$`P`$表示时间序列的周期， $`P = 365.25`$表示以年为周期，$`P = 7`$表示以周为周期。
+它的傅立叶级数的形式都是：
+$`s(t)=\sum\limits_{n=1}^{N}\left(a_{n} \cos \left(\frac{2 \pi n t}{P}\right)+b_{n} \sin \left(\frac{2 \pi n t}{P}\right)\right)`$
 
 ## 6. 节假日效应（holidays and events）
 
