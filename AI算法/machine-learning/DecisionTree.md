@@ -81,19 +81,19 @@ $`\tilde{p}_{k}=\frac{\sum_{x \in \tilde{D}_{k}} w_{x}}{\sum_{x \in \tilde{D}} w
 $`\tilde{r}_{v}=\frac{\sum_{x \in \tilde D^{v}} w_{x}}{\sum_{x \in \tilde{D}} w_{x}} \quad(1 \leq v \leq V)`$
 </div>
 
-假设特征$A$有$v$个取值$\{a_1,a_2 \dots a_v\}$
+假设特征$`A`$有$`v`$个取值$`\{a_1,a_2 \dots a_v\}`$
 
 ​	$\tilde D$：该特征上没有缺失值的样本
 
-​	$\tilde D_k$：$\tilde D$中属于第$k$类的样本子集
+​	$\tilde D_k$：$`\tilde D`$中属于第$k$类的样本子集
 
-​	$\tilde D^v$：$\tilde D$中在特征$a$上取值为$a_v$的样本子集
+​	$\tilde D^v$：$`\tilde D`$中在特征$a$上取值为$`a_v`$的样本子集
 
 ​	$\rho$：无特征$A$缺失的样本加权后所占加权总样本的比例。
 
 ​	$\tilde{p}_{k}$：无缺失值样本第$k$类所占无缺失值样本的比例
 
-​	$\tilde{r}_{v}$：无缺失值样本在特征$a$上取值$a^v$的样本所占无缺失值样本的比例
+​	$\tilde{r}_{v}$：无缺失值样本在特征$`a`$上取值$`a^v`$的样本所占无缺失值样本的比例
 
 ​	新的信息增益公式：
 $$
@@ -153,13 +153,11 @@ $$
 T_a = \{\frac{a_i + a_{i+1}}{2}|1\leq{i}\leq{n-1} \}
 $$
 
-* 把区间$[a_i,a_{i+1})$的中位点$\frac{a_i + a_{i+1}}{2}$作为候选划分点
+* 把区间$`[a_i,a_{i+1})`$的中位点$`\frac{a_i + a_{i+1}}{2}`$作为候选划分点
 
 * 按照处理离散值那样来选择最优的划分点,使用公式：
-  $$
-  Gain(D,a) =\underbrace{max}_{t\in T_a}Gain(D,a,t) = \underbrace{max}_{t\in T_a}\ (Ent(D) - \sum_{\lambda \in \{-,+ \}}\frac{|D_t^{\lambda}|}{|D|}Ent(D_t^{\lambda}))
-  $$
-  其中$Gain(D,a,t)$是样本集$D$基于划分点$t$二分之后的信息增益。划分点时候选择使用$Gain(D,a,t)$最大的划分点。
+  $$Gain(D,a) =\underbrace{max}_{t\in T_a}Gain(D,a,t) = \underbrace{max}_{t\in T_a}\ (Ent(D) - \sum_{\lambda \in \{-,+ \}}\frac{|D_t^{\lambda}|}{|D|}Ent(D_t^{\lambda}))$$
+  其中$`Gain(D,a,t)`$是样本集$`D`$基于划分点$`t`$二分之后的信息增益。划分点时候选择使用$`Gain(D,a,t)`$最大的划分点。
 
 ## 8. 决策树对离散值的处理
 
